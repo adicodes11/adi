@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Titleicon.png" type="image/png">
+    <title>Packages - TravelGo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            margin: 0;
+        }
+        .header {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .back-button {
+            color: #e88145;
+            font-size: 24px;
+            text-decoration: none;
+        }
+        .app-icon {
+            margin-right: 10px;
+        }
+        .packages-heading {
+            text-align: center;
+            font-size: 22px;
+            margin-top: 5px;
+        }
+        .packages-container{
+            max-height: 600px;
+            overflow: auto;
+        }
+        .packages {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 10px;
+        }
+        .package {
+            width: calc(33.33% - 20px);
+            background: #fff;
+            padding: 18px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            margin: 10px;
+            transition: transform 0.2s;
+        }
+        .package:hover {
+            transform: scale(1.02);
+        }
+        .package img {
+            width: 100%;
+            max-height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .package-info {
+            text-align: center;
+        }
+        .package-info h3 {
+            font-size: 28px;
+            margin-top: 10px;
+        }
+        .package-info p {
+            font-size: 18px;
+        }
+        .package-price {
+            text-align: center;
+        }
+        .package-price p {
+            font-size: 24px;
+            color: #e88145;
+            font-weight: bold;
+        }
+        .book-button {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .book-button a {
+            background: #e88145;
+            color: #fff;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 5px;
+            font-size: 20px;
+            transition: background 0.2s;
+        }
+        .book-button a:hover {
+            background: #fa9b5f;
+        }
+        .footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="top-bar">
+            <a href="index.html" class="back-button">
+                <i class="fas fa-arrow-left"></i>
+            </a>
+            <h1 class="fixed-title">
+                <img src="Titleicon.png" alt="App Icon" class="app-icon">TravelGo
+            </h1>
+        </div>
+    </div>
+    <div class="packages-heading">
+        PACKAGES
+    </div>
+    <div class="packages-container">
+        <div class="packages">
+            <div class="package">
+                <img src="Mumbai.jpg" alt="Mumbai">
+                <div class="package-info">
+                    <h3>Mumbai</h3>
+                    <p>Explore the vibrant city of Mumbai.</p>
+                </div>
+                <div class="package-price">
+                    <p>₹30,000</p>
+                </div>
+                <div class="book-button">
+                    <a href="Book.html">Book Now</a>
+                </div>
+            </div>
+            <div class="package">
+                <img src="New York.jpg" alt="New York">
+                <div class="package-info">
+                    <h3>New York</h3>
+                    <p>Discover the bustling streets of New York.</p>
+                </div>
+                <div class="package-price">
+                    <p>₹1,90,199</p>
+                </div>
+                <div class="book-button">
+                    <a href="Book.html">Book Now</a>
+                </div>
+            </div>
+            <div class="package">
+                <img src="London.jpg" alt="London">
+                <div class="package-info">
+                    <h3>London</h3>
+                    <p>Experience the rich history of London.</p>
+                </div>
+                <div class="package-price">
+                    <p>₹3,99,299</p>
+                </div>
+                <div class="book-button">
+                    <a href="Book.html">Book Now</a>
+                </div>
+            </div>
+            <div class="package">
+                <img src="Sydney.jpg" alt="Sydney">
+                <div class="package-info">
+                    <h3>Sydney</h3>
+                    <p>Enjoy the beautiful beaches of Sydney.</p>
+                </div>
+                <div class="package-price">
+                    <p>₹2,78,099</p>
+                </div>
+                <div class="book-button">
+                    <a href="Book.html">Book Now</a>
+                </div>
+            </div>
+            <div class="package">
+                <img src="Spain.jpg" alt="Spain">
+                <div class="package-info">
+                    <h3>Spain</h3>
+                    <p>Discover the vibrant culture of Spain.</p>
+                </div>
+                <div class="package-price">
+                    <p>₹7,90,399</p>
+                </div>
+                <div class="book-button">
+                    <a href="Book.html">Book Now</a>
+                </div>
+            </div>
+            <div class="package">
+                <img src="Paris.jpg" alt="Paris">
+                <div class="package-info">
+                    <h3>Paris</h3>
+                    <p>Experience the romantic charm of Paris.</p>
+                </div>
+                <div class="package-price">
+                    <p>₹3,60,999</p>
+                </div>
+                <div class="book-button">
+                    <a href="Book.html">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        &copy; 2023 TravelGo. All rights reserved.
+    </div>
+</body>
+</html>

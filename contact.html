@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Titleicon.png" type="image/png">
+    <title>Contact Us - TravelGo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            background: #f4f4f4;
+        }
+        .contact-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 15px;
+            height: 100%;
+        }
+        .left-column {
+            flex: 1;
+        }
+        .right-column {
+            flex: 1;
+            margin-left: 40px;
+        }
+        .contact-details {
+            background-color: #fff;
+            border: 1px solid #e88145;
+            border-radius: 7px;
+            padding: 18px;
+            width: 80%;
+            font-size: 23px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        .map {
+            max-width: 100%;
+            height: 100%;
+            padding: 30px;
+        }
+        .footer {
+            padding: 10px;
+            text-align: center;
+            background-color: #333;
+            color: #fff;
+        }
+        .back-button {
+            color: #e88145;
+            font-size: 24px;
+            text-decoration: none;
+        }
+        .social-media {
+            margin-top: 20px;
+        }
+        .social-media a {
+            font-size: 30px;
+            color: #e88145;
+            text-decoration: none;
+            margin: 0 20px;
+        }
+        .social-media a:hover {
+            color: #ffaa67;
+        }
+        .review-section {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .review-section input[type="text"] {
+            width: 70%;
+            padding: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .star-rating {
+            margin: 10px 0;
+        }
+        .star-rating input {
+            display: none;
+        }
+        .star-rating label {
+            font-size: 30px;
+            color: #e88145;
+            cursor: pointer;
+        }
+        .star-rating label:before {
+            content: '\2605';
+        }
+        .star-rating input:checked ~ label:before {
+            content: '\2605';
+            color: #ffaa67;
+        }
+        .review-section input[type="button"] {
+            background-color: #e88145;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 5px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="top-bar">
+            <a href="index.html" class="back-button">
+                <i class="fas fa-arrow-left"></i>
+            </a>
+            <h1 class="fixed-title">
+                <img src="Titleicon.png" alt="App Icon" class="app-icon">TravelGo
+            </h1>
+            <div class="buttons">
+                <a href="login.html" class="login-button">Login</a>
+                <a href="signup.html" class="signup-button">Sign Up</a>
+            </div>
+        </div>
+    </div>
+    <div class="contact-container">
+        <div class="left-column">
+            <h2>Location</h2>
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.9131338320353!2d144.9563030513275!3d-37.81740527976012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65dd4b8e2aa2f%3A0x2bc871e9c50eac14!2sSydney%2C%20Australia!5e0!3m2!1sen!2sus!4v1574215676840!5m2!1sen!2sus" frameborder="0"
+                style="border:0; width: 100%; height: 350px;" allowfullscreen=""></iframe>
+            </div>
+        </div>
+        <div class="right-column">
+            <div class="contact-details">
+                <h3>Contact Us</h3>
+                <p><strong>Email:</strong> contact@travelGo.com</p>
+                <p><strong>Phone:</strong> +1234567890</p>
+                <p><strong>Address:</strong> 123 Travel Street, Adventureland</p>
+                <div class="social-media">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="review-section">
+                <h3>Your Review</h3>
+                <input type="text" placeholder="Your Name" id="name-input">
+                <div class="star-rating">
+                    <input type="radio" id="star5" name="rating" value="5">
+                    <label for="star5"></label>
+                    <input type="radio" id="star4" name="rating" value="4">
+                    <label for="star4"></label>
+                    <input type="radio" id="star3" name="rating" value="3">
+                    <label for="star3"></label>
+                    <input type="radio" id="star2" name="rating" value="2">
+                    <label for="star2"></label>
+                    <input type="radio" id="star1" name="rating" value="1">
+                    <label for="star1"></label>
+                </div>
+                <input type="button" id="submit-button" value="Submit">
+                <p id="success-message" style="display: none; color: green;">Rated successfully!</p>
+                <p id="error-message" style="display: none; color: red;">Enter your name!</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        &copy; 2023 TravelGo. All rights reserved.
+    </div>
+    <script>
+        // Function to display the success message
+        function displaySuccessMessage() {
+            const successMessage = document.getElementById("success-message");
+            const nameInput = document.getElementById("name-input");
+            if (nameInput.value.trim() === "") {
+                const errorMessage = document.getElementById("error-message");
+                errorMessage.style.display = "block";
+            } else {
+                successMessage.style.display = "block";
+            }
+        }
+        window.onload = function() {
+            const submitButton = document.getElementById("submit-button");
+            submitButton.addEventListener("click", displaySuccessMessage);
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+

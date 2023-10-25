@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Titleicon.png" type="image/png">
+    <title>TravelGo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .login-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 80vh; 
+        }
+        .login-form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            max-width: 500px;
+            width: 100%;
+        }
+        .form-group {
+            margin-bottom: 10px;
+        }
+        .form-group label {
+            display: block;
+            font-weight: bold;
+        }
+        .form-group input {
+            width: 90%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .login-button-container {
+            display: flex;
+            justify-content: center;
+        }
+        .login-button {
+            width: 30%;
+            padding: 10px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .login-button:hover {
+            background-color:#e88145;
+        }
+        .back-button {
+            color: #fff; 
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="top-bar">
+            <a href="index.html" class="back-button">
+                <i class="fas fa-arrow-left"></i>
+            </a>
+            <h1 class="fixed-title">
+                <img src="Titleicon.png" alt="App Icon" class="app-icon">TravelGo
+            </h1>
+        </div>
+    </div>
+    <div class="login-container">
+        <div class="login-form">
+            <center><b><h2>Login</h2></b></center>
+            <form onsubmit="return validateForm()">
+                <div class="form-group">
+                    <label for="username">Username</label><br>
+                    <input type="text" id="username" name="username" placeholder="Enter your username"><br>
+                </div>
+                <div class="form-group">
+                    <label for "password">Password</label><br>
+                    <input type="password" id="password" name="password" placeholder="Enter your password"><br>
+                </div>
+                <div class="login-button-container">
+                    <button type="submit" class="login-button">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        function validateForm() {
+            // Get the username and password values from the form
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            // Check if the provided username and password are correct
+            if (username === "Arundhati" && password === "Aru2003*") {
+                // Redirect to index.html upon successful login
+                window.location.href = "index.html";
+            } else {
+                // Display an error message if login fails
+                alert("Invalid username or password. Please try again.");
+            }
+            return false;
+        }
+    </script>
+</body>
+</html>

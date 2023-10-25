@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Titleicon.png" type="image/png">
+    <title>TravelGo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .back-button {
+            color: #fff;
+        }
+        .error-message {
+            color: red;
+            font-size: 14px;
+        }
+        .input-error {
+            border: 1px solid red;
+        }
+        .signup {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 86vh;
+        }
+        .signup-form {
+            background-color: #f4f4f4;
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+        .signup-form h2 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            text-align: left;
+            margin-bottom: 40px;
+        }
+        .form-group label {
+            display: block;
+            font-weight: bold;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 9px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="top-bar">
+            <a href="index.html" class="back-button">
+                <i class="fas fa-arrow-left"></i>
+            </a>
+            <h1 class="fixed-title">
+                <img src="Titleicon.png" alt="App Icon" class="app-icon">TravelGo
+            </h1>
+        </div>
+    </div>
+    <div class="signup">
+        <div class="signup-form">
+            <h2>SIGNUP</h2>
+            <form onsubmit="return validateForm()">
+                <div class="form-group">
+                    <label for="username">Username</label><br>
+                    <input type="text" id="username" name="username" placeholder="Enter your username">
+                    <p class="error-message" id="username-error"></p>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label><br>
+                    <input type="email" id="email" name="email" placeholder="Enter your email">
+                    <p class="error-message" id="email-error"></p>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label><br>
+                    <input type="password" id="password" name="password" placeholder="Enter your password">
+                    <p class="error-message" id="password-error"></p>
+                </div>
+                <button type="submit" class="login-button">Signup</button><br>
+            </form>
+        </div>
+    </div>
+    <script>
+        function validateForm() {
+            var username = document.getElementById("username").value;
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            // Reset error messages and borders
+            document.getElementById("username-error").innerText = "";
+            document.getElementById("email-error").innerText = "";
+            document.getElementById("password-error").innerText = "";
+    
+            document.getElementById("username").classList.remove("input-error");
+            document.getElementById("email").classList.remove("input-error");
+            document.getElementById("password").classList.remove("input-error");
+    
+            var isValid = true;
+            if (username.length < 6) {
+                document.getElementById("username-error").innerText = "Username must be at least 6 characters long.";
+                document.getElementById("username").classList.add("input-error");
+                isValid = false;
+            }
+            var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+            if (!email.match(emailPattern)) {
+                document.getElementById("email-error").innerText = "Please enter a valid email address.";
+                document.getElementById("email").classList.add("input-error");
+                isValid = false;
+            }
+            if (password.length < 6) {
+                document.getElementById("password-error").innerText = "Password must be at least 6 characters long.";
+                document.getElementById("password").classList.add("input-error");
+                isValid = false;
+            }
+            if (isValid) {
+                alert("Signup successful!");
+            }
+            return isValid;
+        }
+    </script>
+</body>
+</html>
